@@ -269,7 +269,7 @@ function processFoundRecords(searchObj, queryObj, records) {
             validData,
             fileSystemSafeName = normaliseRecordName(record.recordName),
             filePath = basePath + SLASH + record.folder + SLASH,
-            sys_id = record.recordData.sys_id || record.sys_id;
+            sys_id = record.recordData ? record.recordData.sys_id : record.sys_id;
 
         var fileName = fileSystemSafeName + '.' + record.fieldSuffix;
 
